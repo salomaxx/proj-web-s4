@@ -1,13 +1,22 @@
 <template>
-    
-    <header>
-        <h1> TITRE DU SITE</h1>
-    </header>
-  
+    <HeaderVue></HeaderVue>
+    <div id="app"></div>
+
+    <body>
+    </body>
+
 </template>
 
 <script>
-export default {}
+//import nom? from './components/fichier.vue';
+import HeaderVue from './components/Header.vue';
+
+export default {
+    components: {
+        //nom?
+        HeaderVue
+    }
+}
 </script>
 
 <!--scoped pour dire que ca s'applique que dans le template de ce fichier -->
