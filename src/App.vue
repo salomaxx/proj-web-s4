@@ -8,12 +8,10 @@
 </template>
 
 <script>
-//import nom? from './components/fichier.vue';
-import HeaderVue from './components/Header.vue';
+import HeaderVue from './component/Header.vue';
 
 export default {
     components: {
-        //nom?
         HeaderVue
     }
 }
