@@ -1,15 +1,22 @@
 <template>
     <HeaderVue></HeaderVue>
+    <CharacterVue></CharacterVue>
+    <GalleryVue></GalleryVue>
+    
     <div id="app"></div>
 
 </template>
 
 <script>
 import HeaderVue from './component/Header.vue';
+import CharacterVue from './component/Character.vue';
+import GalleryVue from './component/Gallery.vue';
 
 export default {
   components: {
-    HeaderVue
+    HeaderVue,
+    CharacterVue,
+    GalleryVue
   }
 }
 </script>
