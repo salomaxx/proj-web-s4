@@ -2,8 +2,10 @@
     <div class="Header">
         <body>
             <header>
-                <h1> The Bojack Horseman Characters</h1>
-                <img src="/Users/salometeyssier/Desktop/web/projet/public/caracters.png" alt="characters" width="800">
+                <br>
+                <img src="/Users/salometeyssier/Desktop/web/projet/public/titre-bh.png" alt="characters" style="display: block; margin: 0 auto;" width="90%">
+                <br>
+                <h1> Librairie de tous les personnages apparaissant dans le dessin animé Bojack Horseman</h1>
             </header>
         </body>
     </div>
@@ -23,15 +25,12 @@
 
 header{
     font-family : 'BJPolice' ;
-    font-size : 15px ; 
+    text-align: center;
+    font-size : 1vw ; 
 }
 
 h1 {
     color: #0c0c0c;
-    /* padding: 0;
-    margin: 0;
-    font-size: clamp(1rem, 2vw, 2.5rem);
-    font-weight: 100;*/
     } 
 
 h2 {
