@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    // import Character from './components/Character.vue'
+    import Character from './Character.vue'
 
     export default {
         name: 'CharacterGallery',

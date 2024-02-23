@@ -1,18 +1,18 @@
 <template>
     <HeaderVue></HeaderVue>
-    <!-- <GalleryVue></GalleryVue> -->
+    <GalleryVue></GalleryVue>
     <div id="app"></div>
 
 </template>
 
 <script>
 import HeaderVue from './component/Header.vue';
-// import GalleryVue from './component/Gallery.vue';
+import GalleryVue from './component/Gallery.vue';
 
 export default {
   components: {
     HeaderVue,
-    // GalleryVue
+    GalleryVue
   }
 }
 </script>
