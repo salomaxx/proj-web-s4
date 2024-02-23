@@ -1,7 +1,7 @@
 <template>
     <HeaderVue></HeaderVue>
-    <CharacterVue></CharacterVue>
-    <GalleryVue></GalleryVue>
+    <!-- <CharacterVue></CharacterVue> 
+    <GalleryVue></GalleryVue> -->
     
     <div id="app"></div>
 
@@ -9,14 +9,14 @@
 
 <script>
 import HeaderVue from './component/Header.vue';
-import CharacterVue from './component/Character.vue';
-import GalleryVue from './component/Gallery.vue';
+// import CharacterVue from './component/Character.vue';
+// import GalleryVue from './component/Gallery.vue';
 
 export default {
   components: {
     HeaderVue,
-    CharacterVue,
-    GalleryVue
+    // CharacterVue,
+    // GalleryVue
   }
 }
 </script>
