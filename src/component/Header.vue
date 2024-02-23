@@ -3,6 +3,7 @@
         <body>
             <header>
                 <h1> The Bojack Horseman Characters</h1>
+                <img src="/Users/salometeyssier/Desktop/web/projet/public/caracters.png" alt="characters" width="800">
             </header>
         </body>
     </div>
