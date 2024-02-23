@@ -1,11 +1,11 @@
 <template>
     <div class="character-gallery">
-        <Character></Character>
+        <Character/>
     </div>
 </template>
 
 <script>
-    import Character from './components/Character.vue'
+    // import Character from './components/Character.vue'
 
     export default {
         name: 'CharacterGallery',
