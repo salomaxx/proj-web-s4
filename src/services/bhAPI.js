@@ -1,5 +1,5 @@
 const getBhData = async function() {
-    const response = await fetch("https://my-api.com")
+    const response = await fetch("https://bojack-horseman-api.onrender.com/")
     if (response.status == 200) {
     return await response.json()
     } else {
