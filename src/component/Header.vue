@@ -32,7 +32,6 @@ header{
 
 h1 {
     color: #0b0b0b;
-    /* -webkit-text-stroke: 2px black;  */
 } 
 
 </style>

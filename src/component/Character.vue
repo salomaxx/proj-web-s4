@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { getBhData } from '/Users/salometeyssier/Desktop/web/projet/src/services/api/bhAPI.js';
+import { getBbData } from '/Users/salometeyssier/Desktop/web/projet/src/services/api/bbAPI.js';
 export default {
     name: 'Character',
     data() {
@@ -17,7 +17,7 @@ export default {
     },
     async mounted() {
         try {
-            const characters = await getBhData();
+            const characters = await getBbData();
             // Suppose you want to display the third character from the API response
             // You may need to adapt this based on the actual structure of the data returned by getBhData
             this.character = characters[6]; // 3rd character (index 2)
