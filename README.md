@@ -3,6 +3,7 @@
 This template should help get you started developing with Vue 3 in Vite.
 
 Projet IMAC semestre 4, cours de Web
+
 API UTILISÉE : https://www.bobsburgersapi.com/ <3
 
 ## Recommended IDE Setup
