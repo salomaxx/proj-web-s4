@@ -26,7 +26,7 @@ a,
   body {
     /* display: flex; */
     place-items: center;
-    background-color: #ffd182;  
+    background-color: #B6eB68; 
   }
 
   #app {
@@ -37,6 +37,11 @@ a,
 }
 
 @font-face {
-  font-family: 'BJPolice';
-  src: url('./ness.ttf') format('truetype'); 
+  font-family: 'BBPolice';
+  src: url('BB.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'BB2Police';
+  src: url('BB2.ttf') format('truetype'); 
 }

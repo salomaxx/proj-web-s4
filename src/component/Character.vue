@@ -1,10 +1,8 @@
 <template>
     <div class="character">
-        <img class="picture" src="/Users/salometeyssier/Desktop/web/projet/public/character-test.webp"/>
-        <h1>MR PEANUTBUTTER</h1>
-        <h2>dog</h2>
-        <h2>labrador retriever</h2>
-        <h3>First ep : BoJack Horseman: The BoJack Horseman Story, Chapter One</h3>
+        <img class="picture" src="/Users/salometeyssier/Desktop/web/projet/public/louise.webp"/>
+        <h1>LOUISE</h1>
+        <h2>occupation</h2>
     </div>
 </template>
 
@@ -60,10 +58,11 @@ export default {
 
 
     h1 {
-        font-family : 'BJPolice' ;
+        font-family : 'BBPolice' ;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 40px;
+        letter-spacing: 4px;
     }
 
     h2 {
