@@ -1,9 +1,14 @@
 const getBbData = async function() {
-    const response = await fetch("https://bobsburgers-api.herokuapp.com/")
-    if (response.status == 200) {
-    return await response.json()
-    } else {
-    new Error(response.statusText)
+    try {
+        const response = await fetch("https://bobsburgers-api.herokuapp.com/characters/");
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Erreur lors de la récupération des données', error);
+        throw error;
     }
-    }
-    export { getBbData }
+};
+
+export { getBbData };

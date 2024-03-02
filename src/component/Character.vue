@@ -1,13 +1,18 @@
 <template>
     <div class="character">
-        <img class="picture" src="/Users/salometeyssier/Desktop/web/projet/public/louise.webp"/>
-        <h1>LOUISE</h1>
-        <h2>occupation</h2>
+        <!-- <img class="picture" src="/Users/salometeyssier/Desktop/web/projet/public/louise.webp"/> -->
+        <!-- <h1>LOUISE</h1>
+        <h2>occupation</h2> -->
+
+        <img class="picture" :src="character.image"/>
+        <h1>{{ character.name }}</h1>
+        <h2>{{ character.occupation }}</h2>
+
     </div>
 </template>
 
 <script>
-import { getBbData } from '/Users/salometeyssier/Desktop/web/projet/src/services/api/bbAPI.js';
+import { getBbData } from '@/services/api/bbAPI.js';
 export default {
     name: 'Character',
     data() {
@@ -18,9 +23,7 @@ export default {
     async mounted() {
         try {
             const characters = await getBbData();
-            // Suppose you want to display the third character from the API response
-            // You may need to adapt this based on the actual structure of the data returned by getBhData
-            this.character = characters[6]; // 3rd character (index 2)
+            this.character = characters[0]; //max 493 
         } catch (error) {
             console.error('Error fetching character data:', error);
         }
@@ -53,7 +56,7 @@ export default {
         display: block; 
         margin: 0 auto;
         border-radius: 20px;
-        width : 250px;
+        width : 200px;
     }
 
 
@@ -63,6 +66,7 @@ export default {
         font-weight: 600;
         font-size: 40px;
         letter-spacing: 4px;
+        line-height: 1;
     }
 
     h2 {
