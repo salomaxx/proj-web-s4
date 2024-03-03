@@ -23,7 +23,7 @@ export default {
     async mounted() {
         try {
             const characters = await getBbData();
-            this.character = characters[0]; //max 493 
+            this.character = characters[309]; //max 493 
         } catch (error) {
             console.error('Error fetching character data:', error);
         }
