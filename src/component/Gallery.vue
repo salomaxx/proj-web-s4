@@ -1,6 +1,6 @@
 <template>
     <div class="character-gallery">
-        <Character v-for="(character, index) in characters" :key="index" :characterData="character"/>
+        <Character v-for="(character, index) in filteredCharacters" :key="index" :characterData="character"/>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 import Character from './Character.vue';
 import { getBbData } from '@/services/api/bbAPI.js';
 
-const MAX_CHARACTERS = 47;
+const MAX_CHARACTERS = 50; //nombre de perso max sur la page
 
 export default {
     name: 'CharacterGallery',
@@ -20,16 +20,22 @@ export default {
             characters: []
         };
     },
+    computed: {
+        filteredCharacters() {
+            const filtered = this.characters.filter(character => character.occupation);//pour enlever persos dont occupation vide
+            return filtered.slice(0, MAX_CHARACTERS);
+        }
+    },
     async mounted() {
         try {
-            const allCharacters = await getBbData();
-            this.characters = allCharacters.slice(0, MAX_CHARACTERS); // Sélectionnez seulement les premiers MAX_CHARACTERS personnages
+            this.characters = await getBbData();
         } catch (error) {
             console.error('Error fetching characters data:', error);
         }
     }
 };
 </script>
+
 
 <style scoped>
 .character-gallery {

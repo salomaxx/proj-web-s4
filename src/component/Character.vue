@@ -1,6 +1,7 @@
 <template>
     <div class="character">
         <img class="picture" :src="characterData.image"/>
+        <br>
         <h1>{{ characterData.name }}</h1>
         <h2>{{ characterData.occupation }}</h2>
     </div>
@@ -46,7 +47,6 @@ export default {
 
     }
 
-
     h1 {
         font-family : 'BBPolice' ;
         text-transform: uppercase;
@@ -57,7 +57,7 @@ export default {
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     h3 {
