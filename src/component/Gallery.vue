@@ -8,7 +8,7 @@
 import Character from './Character.vue';
 import { getBbData } from '@/services/api/bbAPI.js';
 
-const MAX_CHARACTERS = 50; //nombre de perso max sur la page
+const MAX_CHARACTERS = 100; //nombre de perso max sur la page
 
 export default {
     name: 'CharacterGallery',

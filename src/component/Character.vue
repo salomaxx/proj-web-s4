@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
     .character {
-        background-color: #ffffffe2;
+        background-color: #ffffffd2;
         width: 230px; 
         /* height: 600px; */
         padding: 20px;
@@ -36,6 +36,7 @@ export default {
 
     .character:hover{
         transform: scale(1.02); 
+        background-color: #fffffffd;
     }
 
     .picture{
