@@ -5,7 +5,7 @@
                 <br>
                 <img src="/Users/salometeyssier/Desktop/web/projet/public/titre-bb.png" alt="characters" style="display: block; margin: 0 auto;" width="90%">
                 <br>
-                <h1> Librairie des personnages apparaissant dans le cartoon Bob's Burger</h1>
+                <!-- <h1> Librairie des personnages apparaissant dans le cartoon Bob's Burger</h1> -->
             </header>
         </body>
     </div>

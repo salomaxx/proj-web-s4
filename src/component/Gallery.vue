@@ -1,6 +1,6 @@
 <template>
     <div class="character-gallery">
-        <Character v-for="character in characters" :key="character.id" :character="character"/>
+        <Character v-for="(character, index) in characters" :key="index" :characterData="character"/>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 import Character from './Character.vue';
 import { getBbData } from '@/services/api/bbAPI.js';
 
-const MAX_CHARACTERS = 12;
+const MAX_CHARACTERS = 47;
 
 export default {
     name: 'CharacterGallery',
@@ -33,24 +33,32 @@ export default {
 
 <style scoped>
 .character-gallery {
+    margin-left: 5%;
+    margin-right: 10%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5%;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1420px) {
+    .character-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1150px) {
     .character-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 870px) {
     .character-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .character-gallery {
         grid-template-columns: repeat(1, 1fr);
     }

@@ -1,44 +1,29 @@
 <template>
     <div class="character">
-        <!-- <img class="picture" src="/Users/salometeyssier/Desktop/web/projet/public/louise.webp"/> -->
-        <!-- <h1>LOUISE</h1>
-        <h2>occupation</h2> -->
-
-        <img class="picture" :src="character.image"/>
-        <h1>{{ character.name }}</h1>
-        <h2>{{ character.occupation }}</h2>
-
+        <img class="picture" :src="characterData.image"/>
+        <h1>{{ characterData.name }}</h1>
+        <h2>{{ characterData.occupation }}</h2>
     </div>
 </template>
 
 <script>
-import { getBbData } from '@/services/api/bbAPI.js';
 export default {
     name: 'Character',
-    data() {
-        return {
-            character: {}
-        };
-    },
-    async mounted() {
-        try {
-            const characters = await getBbData();
-            this.character = characters[309]; //max 493 
-        } catch (error) {
-            console.error('Error fetching character data:', error);
-        }
+    props: {
+        characterData: Object
     }
 }
-
 </script>
 
 <style scoped>
     .character {
-        /* display: flex; */
         background-color: #ffffffe2;
-        width: 300px; 
+        width: 230px; 
+        /* height: 600px; */
         padding: 20px;
-        margin: 5% ;
+        margin-bottom: 7%;
+        margin-left: 5%;
+        margin-right: 20%;
         border: 3px solid #000000;
         border-radius: 20px;
         box-sizing: border-box;
@@ -49,14 +34,16 @@ export default {
     }
 
     .character:hover{
-        transform: scale(1.1); 
+        transform: scale(1.02); 
     }
 
     .picture{
         display: block; 
         margin: 0 auto;
         border-radius: 20px;
-        width : 200px;
+        max-width : 180px;
+        height: 250px;
+
     }
 
 
