@@ -1,11 +1,9 @@
 <template>
     <div class="Header">
-        <body>
             <header>
                 <img src="@/assets/titre-bb.png" alt="characters" style="display: block; margin: 0 auto;" width="90%">
                 <!-- <h1> Librairie des personnages apparaissant dans le cartoon Bob's Burger</h1> -->
             </header>
-        </body>
     </div>
 
 </template>
