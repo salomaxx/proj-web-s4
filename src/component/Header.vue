@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import HeaderVue from "./Header.vue"
+    export default{};
 </script>
 
 <style>

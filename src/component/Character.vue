@@ -31,7 +31,7 @@ export default {
         font-size: 20px;
         color: black;
         text-align: center;
-        transform: transform 0.3s;
+        /* transform: transform 1s ease-in; */
     }
 
     .character:hover{

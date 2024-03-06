@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    // import FooterVue from "./Footer.vue"
+   export default{};
 </script>
 
 <style>
@@ -17,20 +17,16 @@
 .Footer {
     margin-top: 120px;
     margin-bottom: 50px;
-
-
 }
 
 .Link{
     text-align: center;
     font-size : 0.8vw ; 
-    font-weight: bold;
 }
 
 footer{
     text-align: center;
-    font-size : 0.5vw ; 
-    font-weight: bold;
+    font-size : 0.5vw;
     color : #0b0b0b;
 }
 
