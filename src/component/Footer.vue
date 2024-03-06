@@ -15,18 +15,18 @@
 <style>
 
 .Footer {
-    margin-top: 120px;
-    margin-bottom: 50px;
+    margin-top: 12%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.Link{
-    text-align: center;
-    font-size : 0.8vw ; 
+h1{
+    font-size : 15px
 }
 
 footer{
     text-align: center;
-    font-size : 0.5vw;
     color : #0b0b0b;
 }
 
