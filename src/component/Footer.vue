@@ -28,6 +28,7 @@ h1{
 footer{
     text-align: center;
     color : #0b0b0b;
+    /* font-size : 20px */
 }
 
 </style>

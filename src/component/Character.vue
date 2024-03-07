@@ -1,5 +1,5 @@
 <template>
-    <div class="character">
+    <div class="Character">
         <img class="picture" :src="characterData.image"/>
         <br>
         <h1>{{ characterData.name }}</h1>
@@ -17,9 +17,9 @@ export default {
 </script>
 
 <style scoped>
-    .character {
+    .Character {
         background-color: #ffffffd2;
-        width: 230px; 
+        width: 200px; 
         /* height: 600px; */
         padding: 20px;
         margin-bottom: 7%;
@@ -28,13 +28,13 @@ export default {
         border: 3px solid #000000;
         border-radius: 20px;
         box-sizing: border-box;
-        font-size: 20px;
+        font-size: 15px;
         color: black;
         text-align: center;
         /* transform: transform 1s ease-in; */
     }
 
-    .character:hover{
+    .Character:hover{
         transform: scale(1.02); 
         background-color: #fffffffd;
     }
@@ -43,8 +43,8 @@ export default {
         display: block; 
         margin: 0 auto;
         border-radius: 20px;
-        max-width : 180px;
-        height: 250px;
+        max-width : 150px;
+        height: 150px;
 
     }
 
@@ -52,8 +52,8 @@ export default {
         font-family : 'BBPolice' ;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 40px;
-        letter-spacing: 4px;
+        font-size: 30px;
+        letter-spacing: 3px;
         line-height: 1;
     }
 

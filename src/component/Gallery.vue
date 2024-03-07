@@ -8,7 +8,7 @@
 import Character from './Character.vue';
 import { getBbData } from '@/services/api/bbAPI.js';
 
-const MAX_CHARACTERS = 10; //nombre de perso max sur la page
+const MAX_CHARACTERS = 53; //nombre de perso max sur la page
 
 export default {
     name: 'CharacterGallery',
@@ -39,8 +39,8 @@ export default {
 
 <style scoped>
 .character-gallery {
-    margin-left: 5%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 50px;
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

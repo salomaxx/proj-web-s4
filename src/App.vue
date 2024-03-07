@@ -1,5 +1,6 @@
 <template>
     <HeaderVue></HeaderVue>
+    <SideVue></SideVue>
     <GalleryVue></GalleryVue>
     <FooterVue></FooterVue>
     <div id="app"></div>
@@ -8,12 +9,14 @@
 
 <script>
 import HeaderVue from './component/Header.vue';
+import SideVue from './component/Side.vue';
 import GalleryVue from './component/Gallery.vue';
 import FooterVue from './component/Footer.vue';
 
 export default {
   components: {
     HeaderVue,
+    SideVue,
     GalleryVue,
     FooterVue
   }
