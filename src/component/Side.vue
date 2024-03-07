@@ -1,6 +1,7 @@
 <template>
   <div class="Side">
-      <img src="@/assets/burger.png" alt="burger" class="Burger" width="90%">
+      <img src="@/assets/burger.png" alt="burger" class="Burger" width="95%" @click="changeRandomBurger">
+      <br>
       <h3>Your burger of the day is : </h3>
       <br>
       <h2>{{ randomBurger.name }}</h2>
@@ -28,6 +29,15 @@ export default {
           return {};
       }
   },
+  methods: {
+    async changeRandomBurger() {
+        try {
+            this.randomBurgerIndex = Math.floor(Math.random() * this.burgersOfTheDay.length);
+        } catch (error) {
+            console.error('Error changing random burger', error);
+        }
+    }
+  },
   async mounted() {
       try {
           this.burgersOfTheDay = await getBurgerOfTheDay();
@@ -38,7 +48,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
   .Side {
@@ -64,7 +73,7 @@ export default {
   }
 
   .Burger:hover{
-        transform: scale(1.2); 
+        transform: scale(1.1); 
     }
 
   h2{
@@ -86,4 +95,3 @@ export default {
   }
 
 </style>
-  
