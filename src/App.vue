@@ -28,4 +28,4 @@ export default {
  /* body {
         margin: 0;
     } */    
-</style>
+</style>./component/SideMenu.vue

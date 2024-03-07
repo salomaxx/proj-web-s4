@@ -6,7 +6,7 @@
 
 <script>
 import Character from './Character.vue';
-import { getBbData } from '@/services/api/bbAPI.js';
+import { getCharacterData } from '@/services/api/bbAPI.js';
 
 const MAX_CHARACTERS = 53; //nombre de perso max sur la page
 
@@ -28,7 +28,7 @@ export default {
     },
     async mounted() {
         try {
-            this.characters = await getBbData();
+            this.characters = await getCharacterData();
         } catch (error) {
             console.error('Error fetching characters data:', error);
         }

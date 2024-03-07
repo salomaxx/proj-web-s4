@@ -1,27 +1,52 @@
 <template>
-    <div class="Side">
-        <h2>Click here</h2>
-        <br>
-        <img src="@/assets/burger.png" alt="burger" class="Burger" width="80%">
-        <br>
-        <h3>Your burger of the day is : </h3>
-        <br>
-        <h2>Bob's burger!</h2>
-    </div>
+  <div class="Side">
+      <img src="@/assets/burger.png" alt="burger" class="Burger" width="90%">
+      <h3>Your burger of the day is : </h3>
+      <br>
+      <h2>{{ randomBurger.name }}</h2>
+      <br>
+      <h3>For {{ randomBurger.price }} only ! </h3>
+  </div>
 </template>
 
 <script>
-    export default {};
+import { getBurgerOfTheDay } from '@/services/api/bbAPI.js';
+
+export default {
+  name: 'burgerOfTheDay',
+  data() {
+      return {
+          burgersOfTheDay: [],
+          randomBurgerIndex: -1
+      };
+  },
+  computed: {
+      randomBurger() {
+          if (this.randomBurgerIndex !== -1) {
+              return this.burgersOfTheDay[this.randomBurgerIndex];
+          }
+          return {};
+      }
+  },
+  async mounted() {
+      try {
+          this.burgersOfTheDay = await getBurgerOfTheDay();
+          this.randomBurgerIndex = Math.floor(Math.random() * this.burgersOfTheDay.length);
+      } catch (error) {
+          console.error('Error fetching burgers of the day', error);
+      }
+  }
+};
 </script>
+
 
 <style scoped>
   .Side {
     position:absolute;
-    top: 200px; /* Ajustez ceci selon la hauteur de votre en-tête */
+    top: 200px;
     left: 0;
     width: 18%;
     min-width: 200px;
-    height: 500px;
     background-color: #f1ce36;
     padding: 20px;
     margin-bottom: 7%;
@@ -47,18 +72,16 @@
     font-family : 'BBPolice' ;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 40px;
     letter-spacing: 3px;
     line-height: 1;
   }
 
   h3{
     color: #000000;
-    font-family : 'BBPolice' ;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 30px;
-    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 20px;
     line-height: 1;
   }
 
