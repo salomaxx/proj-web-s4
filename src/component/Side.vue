@@ -31,12 +31,12 @@ export default {
   },
   methods: {
     async changeRandomBurger() {
-        try {
-            this.randomBurgerIndex = Math.floor(Math.random() * this.burgersOfTheDay.length);
-        } catch (error) {
-            console.error('Error changing random burger', error);
-        }
+    try {
+        this.randomBurgerIndex = Math.floor(Math.random() * this.burgersOfTheDay.length);
+    } catch (error) {
+        console.error('Error changing random burger', error);
     }
+}
   },
   async mounted() {
       try {
@@ -56,7 +56,8 @@ export default {
     left: 0;
     width: 18%;
     min-width: 200px;
-    background-color: #f1ce36;
+    background-color: #ffe7ba; 
+    /* background-color: #f1ce36; */
     padding: 20px;
     margin-bottom: 7%;
     margin-left: 1%;
@@ -73,7 +74,7 @@ export default {
   }
 
   .Burger:hover{
-        transform: scale(1.1); 
+        transform: scale(1.2); 
     }
 
   h2{
