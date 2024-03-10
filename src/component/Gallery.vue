@@ -41,10 +41,11 @@ export default {
 .character-gallery {
     margin-left: 20%;
     margin-right: 50px;
-    margin-top: 50px;
+    margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap : .2%;
+
 }
 
 @media (max-width: 1420px) {
