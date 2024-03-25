@@ -13,9 +13,6 @@ export default {
     };
   },
   methods: {
-    handleInput() {
-      // Vous pouvez ajouter une logique supplémentaire ici si nécessaire
-    },
     search() {
       // Émettre un événement avec la requête de recherche pour que le composant parent puisse réagir
       this.$emit('search', this.searchQuery.trim());
