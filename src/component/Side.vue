@@ -52,12 +52,10 @@ export default {
 <style scoped>
   .Side {
     position:absolute;
-    top: 200px;
+    top: 175px;
     left: 0;
-    width: 18%;
-    min-width: 200px;
+    width: 250px;
     background-color: #ffe7ba; 
-    /* background-color: #f1ce36; */
     padding: 20px;
     margin-bottom: 7%;
     margin-left: 1%;

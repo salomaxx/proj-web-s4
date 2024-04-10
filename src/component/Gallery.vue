@@ -66,7 +66,7 @@ export default {
 
 <style scoped>
 .character-gallery {
-  margin-left: 20%;
+  margin-left: 300px;
   margin-right: 50px;
   margin-top: 25px;
   display: grid;
@@ -80,19 +80,19 @@ export default {
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1210px) {
   .character-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 1000px) {
   .character-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .character-gallery {
     grid-template-columns: repeat(1, 1fr);
   }
