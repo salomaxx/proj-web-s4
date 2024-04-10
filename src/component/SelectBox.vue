@@ -1,8 +1,8 @@
 <template>
         <select class="selectBox" v-model="selectedOption" @change="selectCards">
-            <option value="All">All</option>
-            <option value="Female">Women</option>
-            <option value="Male">Men</option>
+            <option value="all">All</option>
+            <option value="female">Women</option>
+            <option value="male">Men</option>
         </select>
 </template>
 
@@ -16,7 +16,7 @@
     },
     methods: {
       selectCards() {
-        this.$emit('select', this.selectedOption); 
+        this.$emit('select', this.selectedOption.toLowerCase()); 
     }
   }
 }

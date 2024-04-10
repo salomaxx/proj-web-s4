@@ -16,13 +16,13 @@
       SearchBar
     },
     methods: {
-      handleSearch(query) {
-        this.$emit('search', query);
-      },
-      handleSelect(selection) {
-        this.$emit('select', selection);
-      }
-    }
+  handleSearch(query) {
+    this.$emit('search', query);
+  },
+  handleSelect(selection) {
+    this.$emit('select', selection);
+  }
+}
   };
   </script>
   

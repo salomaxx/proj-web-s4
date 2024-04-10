@@ -30,49 +30,39 @@ export default {
   computed: {
     filteredCharacters() {
       let filtered = this.characters.filter(character => character.occupation); // pour enlever les personnages dont l'occupation est vide
-      
-      if (this.searchQuery.trim() !== '') {
-        const regex = new RegExp('^' + this.escapeRegExp(this.searchQuery.trim()), 'i');
-        filtered = filtered.filter(character => regex.test(character.name));
+
+      if (this.searchQuery){
+        filtered = filtered.filter(character => character.name.toLowerCase().includes(this.searchQuery));
       }
+
       if (this.selectedGender !== 'all') {
-  filtered = filtered.filter(character => character.gender.toLowerCase() === this.selectedGender.toLowerCase());
-}
+        filtered = filtered.filter(character => character.gender.toLowerCase() === this.selectedGender.toLowerCase());}
 
       return filtered.slice(0, MAX_CHARACTERS);
     }
   },
+  
   methods: {
-    async fetchCharacters() {
-      try {
-        this.characters = await getCharacterData();
-      } catch (error) {
-        console.error('Error fetching characters data:', error);
-      }
-    },
-    handleSearch(query) {
-      this.searchQuery = query;
-      
-    },
-    
-    handleSelect(selection) {
-      this.selectedGender = selection.toLowerCase(); // convertir en minuscules
-      let filteredCharacters = this.characters.filter(character => character.gender.toLowerCase() === this.selectedGender); // filtrer personnages
-
-      return filteredCharacters;
-    },
-
-    // escapeRegExp(string) {
-    //   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    // }
-    
+  async fetchCharacters() {
+    try {
+      this.characters = await getCharacterData();
+    } catch (error) {
+      console.error('Error fetching characters data:', error);
+    }
   },
+  handleSearch(query) {
+    this.searchQuery = query;
+    console.log("test");
+  },
+  handleSelect(selection) {
+    this.selectedGender = selection;
+  },
+},
   mounted() {
     this.fetchCharacters();
   }
 };
 </script>
-
 
 <style scoped>
 .character-gallery {

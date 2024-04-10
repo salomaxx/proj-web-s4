@@ -1,6 +1,6 @@
 <template>
   <div class="search-bar">
-    <input class="search-bar" type="text" v-model="searchQuery" @input="handleInput" placeholder="Type a name !">
+    <input class="search-bar" type="text" v-model="searchQuery" placeholder="Type a name !">
     <button @click="search">Search</button>
   </div>
 </template>
@@ -14,9 +14,8 @@ export default {
   },
   methods: {
     search() {
-      // Émettre un événement avec la requête de recherche pour que le composant parent puisse réagir
-      this.$emit('search', this.searchQuery.trim());
-    }
+    this.$emit('search', this.searchQuery.trim());
+  }
   }
 };
 </script>
