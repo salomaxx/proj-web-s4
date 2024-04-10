@@ -23,18 +23,22 @@ export default {
   data() {
     return {
       characters: [],
-      searchQuery: ''
+      searchQuery: '',
+      selectedGender: 'all'
     };
   },
   computed: {
     filteredCharacters() {
       let filtered = this.characters.filter(character => character.occupation); // pour enlever les personnages dont l'occupation est vide
+      
       if (this.searchQuery.trim() !== '') {
         const regex = new RegExp('^' + this.escapeRegExp(this.searchQuery.trim()), 'i');
-        filtered = filtered.filter(character =>
-          regex.test(character.name)
-        );
+        filtered = filtered.filter(character => regex.test(character.name));
       }
+      if (this.selectedGender !== 'all') {
+  filtered = filtered.filter(character => character.gender.toLowerCase() === this.selectedGender.toLowerCase());
+}
+
       return filtered.slice(0, MAX_CHARACTERS);
     }
   },
@@ -48,16 +52,27 @@ export default {
     },
     handleSearch(query) {
       this.searchQuery = query;
+      
     },
-    escapeRegExp(string) {
-      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
+    
+    handleSelect(selection) {
+      this.selectedGender = selection.toLowerCase(); // convertir en minuscules
+      let filteredCharacters = this.characters.filter(character => character.gender.toLowerCase() === this.selectedGender); // filtrer personnages
+
+      return filteredCharacters;
+    },
+
+    // escapeRegExp(string) {
+    //   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // }
+    
   },
   mounted() {
     this.fetchCharacters();
   }
 };
 </script>
+
 
 <style scoped>
 .character-gallery {
