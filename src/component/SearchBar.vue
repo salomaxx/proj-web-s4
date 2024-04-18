@@ -1,7 +1,8 @@
 <template>
   <div class="search-bar">
-    <input class="search-bar" type="text" v-model="searchQuery" placeholder="Type a name !">
+    <input class="search-input" type="text" v-model="searchQuery" @keyup.enter="search" placeholder="Type a name !">
     <button @click="search">Search</button>
+    <button @click="clearSearch">Clear</button>
   </div>
 </template>
 
@@ -14,8 +15,18 @@ export default {
   },
   methods: {
     search() {
-    this.$emit('search', this.searchQuery.trim());
-  }
+      const trimmedQuery = this.searchQuery.trim();
+      this.$emit('search', trimmedQuery);
+      this.saveSearchKeyword(trimmedQuery);
+    },
+    clearSearch() {
+      this.searchQuery = '';
+      this.$emit('search', '');
+      this.saveSearchKeyword('');
+    },
+    saveSearchKeyword(keyword) {
+      localStorage.setItem('searchKeyword', keyword);
+    }
   }
 };
 </script>
@@ -27,7 +38,7 @@ export default {
   padding-right: 5%;
 }
 
-.search-bar input {
+.search-input {
   padding: 8px 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -38,6 +49,7 @@ export default {
 
 .search-bar button {
   padding: 8px 16px;
+  margin-left: 10px;
   font-size: 16px;
   border: none;
   background-color: #709e2b;
